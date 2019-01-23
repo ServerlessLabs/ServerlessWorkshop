@@ -15,4 +15,4 @@ You will need to have an AWS account before this step.
 
 You can create an account at https://portal.aws.amazon.com/billing/signup#/start
 
-![](AWS-SIGNUP.JPG)
+![](images/AWS-SIGNUP.JPG)
