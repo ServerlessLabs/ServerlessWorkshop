@@ -1,12 +1,18 @@
-# ServerlessWorkshop
+# ServerlessWorkshop - AWS Lambda
 
-Repository for Serverless Workshops to be held in conferences.
+Lambda is the AWS Serverless, or "Functions as a Service" (FaaS) service.
+Developers can upload their own functions without being concerned about "*Servers*" ... they only need
+- to concentrate on their business logic
 
-The workshop will be conducted in various forms covering different tools in different conferences or Meetups.
+no need for developers to be concerned about
+- OS installation, patching or maintenance
+- machine installation or maintenance
+- high availability or scaling
 
-Each workshop will have it's own branch from the main repository at [https://github.com/ServerlessLabs/ServerlessWorkshop](https://github.com/ServerlessLabs/ServerlessWorkshop).
+it is the job of the "*Serverless*" platform to provide the necessary resources.
 
-This Workshop has been conducted at:
-- [2019-Jan: DevConf.cz, Brno "*Hands-on with Serverless"](https://github.com/ServerlessLabs/ServerlessWorkshop/tree/2019-Jan-DevConf.cz/README-2019-Jan-26_DevConf.cz_Hands-on-with-Serverless.md)
+You will need to have an AWS account before this step.
 
+You can create an account at https://portal.aws.amazon.com/billing/signup#/start
 
+![](AWS-SIGNUP.JPG)

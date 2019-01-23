@@ -1,12 +1,11 @@
-# ServerlessWorkshop
+# ServerlessWorkshop - AWS S3 Object Storage
 
-Repository for Serverless Workshops to be held in conferences.
+S3 is an AWS service for storing objects, it can be used for storing and serving up files.
 
-The workshop will be conducted in various forms covering different tools in different conferences or Meetups.
+It is a backend service but we treat it here as it is a common BaaS (Backend-as-a-Service) which we will use to augment a Serverless application.
 
-Each workshop will have it's own branch from the main repository at [https://github.com/ServerlessLabs/ServerlessWorkshop](https://github.com/ServerlessLabs/ServerlessWorkshop).
+You will need to have an AWS account before this step.
 
-This Workshop has been conducted at:
-- [2019-Jan: DevConf.cz, Brno "*Hands-on with Serverless"](https://github.com/ServerlessLabs/ServerlessWorkshop/tree/2019-Jan-DevConf.cz/README-2019-Jan-26_DevConf.cz_Hands-on-with-Serverless.md)
+You can create an account at https://portal.aws.amazon.com/billing/signup#/start
 
-
+![](AWS-SIGNUP.JPG)
