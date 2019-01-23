@@ -11,7 +11,7 @@ Although slides will not be shown, there is an associated slide-set, a general p
 
 ## Pre-requisites
 You will need a PC or Mac to be able to access the VMs to run the lab (browser + ssh access).
-Your instructor will provide you with credentials to connect to your VM once you have entered your e-mail details in the **sign up form** at [**http://bit.ly/20190126SIGNUP**](http://bit.ly/20190126SIGNUP).
+Your instructor will provide you with credentials to connect to your VM once you have entered your e-mail details in the **sign up form** at [**http://bit.ly/20190126SIGNUP**](http://bit.ly/20190126SIGNUP) on the "**USER Registration**" tab.
 (if using Google Sheets is a problem, then just pop by to tell me your e-mail).
 
 You may also run the workshop completely on your own PC though there is some tooling to install - described in the setup pages at 
@@ -24,8 +24,8 @@ You will be required to use your own AWS account, all usage will fall within the
 ## Agenda
 - This Overview, and presentation of Serverless concept
 - [Setup for AWS](/SETUP/SETUP-AWS.md)
-- AWS S3 Object Store (or minio) for static site hosting
-- AWS Lambda
+- [AWS S3 Object Store](AWS-S3-Lambda/README-S3.md) (or minio) for static site hosting
+- [AWS Lambda](AWS-S3-Lambda/README-Lambda.md)
   - About AWS Lambda
   - Implementing a REST api
   - Sending SMS or E-Mail
@@ -38,11 +38,11 @@ You will be required to use your own AWS account, all usage will fall within the
   - OCR/Machine Learning
   - URL Shortener
   - Collaborative Booksmarks site
-- OpenFaaS
+- [OpenFaaS](OpenFaaS/README.md)
   - About Apache OpenFaaS
-  [Setup for OpenFaaS](/SETUP/SETUP-OPENFASS.md)
+  [Setup for OpenFaaS](/SETUP/SETUP-OPENFAAS.md)
   
-- Apache OpenWhisk
+- [Apache OpenWhisk](Apache-OpenFaaS/README.md)
   - About Apache OpenWhisk
   [Setup for OpenWhisk](/SETUP/SETUP-OPENWHISK.md)
 
