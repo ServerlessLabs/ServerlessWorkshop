@@ -11,10 +11,14 @@ OpenFaaS can be quite easily deployed either on Kubernetes or a Docker Swarm clu
 
 On Docker Swarm, a simple ```docker-compose up``` from the source directory is sufficient to start the platform.
 
+Read about the latest OpenFaaS news at https://www.openfaas.com/blog/ or on Alex Ellis' blog at https://blog.alexellis.io/.
 
 ## Tools
 
 The command-line tool faas-cli is already installed into the provided VMs (at /usr/local/bin).
+
+You can learn more about the tool at:
+https://blog.alexellis.io/quickstart-openfaas-cli/ and https://docs.openfaas.com/cli/install/.
 
 ## Workshop
 
