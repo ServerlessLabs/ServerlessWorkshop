@@ -313,48 +313,6 @@ Uptime: 183867
 
 Note the use of '*echo* |' because ```faas-cli invoke``` always reads input from stdin.
 
-# TO ADD
-
-Helicopter view
-
-OpenFaaS (and Whisk) as BYOC platform
-
-Replicas
-
-# Creating and deploying your own functions
-
-See
-https://docs.openfaas.com/tutorials/workshop/
-
-and
-
-https://docs.openfaas.com/tutorials/cli-with-node/
-
-and
-
-https://docs.openfaas.com/tutorials/first-python-function/
-
-and
-
-https://docs.openfaas.com/reference/secrets/
-
-
-```bash
-
-```
-
-# Further work
-
-
-## OpenFaaS community Workshop
-
-https://docs.openfaas.com/tutorials/workshop/
-
-## OpenFaaS Cloud
-
-https://docs.openfaas.com/openfaas-cloud/intro/
-
-
 
 ```bash
 
