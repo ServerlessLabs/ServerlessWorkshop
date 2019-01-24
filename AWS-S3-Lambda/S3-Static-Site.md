@@ -7,19 +7,13 @@ You should first have
   - the ~/.aws/configure file with your AWS account credentials or
   - created a sourceable ~/.aws/credentials.rc (can be in any location) file
 
-
-```bash
-# cat ~/.aws/credentials.rc
 ```
+> cat ~/.aws/credentials.rc
 
-    
-    # user1:
-    
-    export AWS_ACCESS_KEY_ID="<your-access-key-id>"
-    export AWS_SECRET_ACCESS_KEY="<your-secret-access-key-id>"
-    export AWS_DEFAULT_REGION=us-west-1
-    
-
+export AWS_ACCESS_KEY_ID="<your-access-key>"
+export AWS_SECRET_ACCESS_KEY="<your-secret-access-key>"
+export AWS_DEFAULT_REGION=us-west-1
+```
 
 If you have chosen to use an rc file, source it as ```source <your-aws-credentials-rc-file>```, e.g.
 
@@ -280,7 +274,7 @@ aws s3 mb s3://mjbright-static-site
 aws s3 ls
 ```
 
-    2019-01-23 19:38:50 mjbright-static-site
+    2019-01-24 06:41:23 mjbright-static-site
 
 
 That was lucky !
@@ -293,7 +287,7 @@ Let's create an HTML index file and copy this into our bucket.
 
 
 ```bash
-mkdir website;
+mkdir -p website;
 
 cat > website/index.html <<EOF
 <html>
@@ -306,7 +300,7 @@ EOF
 ls -al website/index.html
 ```
 
-    -rw-rw-r-- 1 user1 user1 74 Jan 23 19:53 website/index.html
+    -rw-rw-r-- 1 user1 user1 74 Jan 24 06:41 website/index.html
 
 
 
@@ -322,7 +316,7 @@ aws s3 sync ./website s3://mjbright-static-site
 aws s3 ls s3://mjbright-static-site
 ```
 
-    2019-01-23 19:54:13         74 index.html
+    2019-01-24 06:41:41         74 index.html
 
 
 So it seems we have created a static web site.
@@ -345,11 +339,11 @@ However, if we visit that web page we will get an error telling us that we canno
 wget -O - http://mjbright-static-site.s3-website-us-west-1.amazonaws.com/index.html
 ```
 
-    --2019-01-23 20:10:57--  http://mjbright-static-site.s3-website-us-west-1.amazonaws.com/index.html
-    Resolving mjbright-static-site.s3-website-us-west-1.amazonaws.com (mjbright-static-site.s3-website-us-west-1.amazonaws.com)... 52.219.28.23
-    Connecting to mjbright-static-site.s3-website-us-west-1.amazonaws.com (mjbright-static-site.s3-website-us-west-1.amazonaws.com)|52.219.28.23|:80... connected.
+    --2019-01-24 06:41:59--  http://mjbright-static-site.s3-website-us-west-1.amazonaws.com/index.html
+    Resolving mjbright-static-site.s3-website-us-west-1.amazonaws.com (mjbright-static-site.s3-website-us-west-1.amazonaws.com)... 52.219.20.66
+    Connecting to mjbright-static-site.s3-website-us-west-1.amazonaws.com (mjbright-static-site.s3-website-us-west-1.amazonaws.com)|52.219.20.66|:80... connected.
     HTTP request sent, awaiting response... 403 Forbidden
-    2019-01-23 20:10:57 ERROR 403: Forbidden.
+    2019-01-24 06:41:59 ERROR 403: Forbidden.
     
 
 
@@ -391,13 +385,6 @@ You now should be able to access your site using a browser, or from the command-
 wget -q -O - http://mjbright-static-site.s3-website-us-west-1.amazonaws.com/index.html
 ```
 
-    <html>
-    <body>
-        <h1> My first amazing web site !! </h1>
-    </body>
-    </html>
-
-
 Let's now create something a little more like a website.
 
 We'll use the Pelican command (installed as a Python module).
@@ -412,26 +399,10 @@ cp -a PELICAN/* website/
 aws s3 sync website/ s3://mjbright-static-site/
 ```
 
-    Done: Processed 0 articles, 0 drafts, 0 pages and 0 hidden pages in 0.07 seconds.
-    upload: website/archives.html to s3://mjbright-static-site/archives.html              
-    upload: website/images/BucketProperties-BeforeWebHostingEnabled.JPG to s3://mjbright-static-site/images/BucketProperties-BeforeWebHostingEnabled.JPG
-    upload: website/categories.html to s3://mjbright-static-site/categories.html
-    upload: website/authors.html to s3://mjbright-static-site/authors.html
-    upload: website/feeds/all.atom.xml to s3://mjbright-static-site/feeds/all.atom.xml
-    upload: website/tags.html to s3://mjbright-static-site/tags.html  
-    upload: website/images/BucketProperties.JPG to s3://mjbright-static-site/images/BucketProperties.JPG
-    upload: website/index.html to s3://mjbright-static-site/index.html
-    upload: website/images/BucketProperties-Settings-EnableWebsiteHosting.JPG to s3://mjbright-static-site/images/BucketProperties-Settings-EnableWebsiteHosting.JPG
-    upload: website/images/Make_index_public.JPG to s3://mjbright-static-site/images/Make_index_public.JPG
-    upload: website/images/BucketProperties-Settings-Enabled_WebsiteHosting.JPG to s3://mjbright-static-site/images/BucketProperties-Settings-Enabled_WebsiteHosting.JPG
-
-
 
 ```bash
 wget -q -O - http://mjbright-static-site.s3-website-us-west-1.amazonaws.com/index.html
 ```
-
-
 
 Unfortunately this broke our website as we have not yet set permissions for the new files we just added to our website.
 
@@ -446,36 +417,24 @@ Your website should now be accessible
 wget -q -O - http://mjbright-static-site.s3-website-us-west-1.amazonaws.com/index.html
 ```
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-            <title>A Pelican Blog</title>
-            <meta charset="utf-8" />
-            <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Full Atom Feed" />
-    </head>
-    
-    <body id="index" class="home">
-            <header id="banner" class="body">
-                    <h1><a href="/">A Pelican Blog <strong></strong></a></h1>
-            </header><!-- /#banner -->
-            <nav id="menu"><ul>
-            </ul></nav><!-- /#menu -->
-    <section id="content">
-    <h2>All articles</h2>
-    
-    <ol id="post-list">
-    </ol><!-- /#posts-list -->
-    </section><!-- /#content -->
-            <footer id="contentinfo" class="body">
-                    <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    </address><!-- /#about -->
-            </footer><!-- /#contentinfo -->
-    </body>
-    </html>
+# Further Work
+
+## S3 Static Site Hosting
+
+An article describing the use of S3 for static website hosting including use of https, DNS routing
+https://medium.freecodecamp.org/how-to-host-a-static-website-with-s3-cloudfront-and-route53-7cbb11d4aeea
+
+
+## Static Site Generators
+
+Try other Static Site generators such as Hugo, Gatsby or Jekyll.
+
+Information about such generators is available here: https://www.staticgen.com/
+
+
 
 You can find more details about S3 website hosting here: https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
+
 
 # Cleanup
 
@@ -487,5 +446,5 @@ aws s3 rm s3://mjbright-static-site --recursive
 aws s3 rb s3://mjbright-static-site
 ```
 
-    remove_bucket: mjbright-static-site
-
+It's also possible to remoce the bucket directly using the ```--force``` option:
+    ```aws s3 rb --force s3://mjbright-static-site```
