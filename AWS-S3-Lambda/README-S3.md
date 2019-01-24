@@ -4,8 +4,13 @@ S3 is an AWS service for storing objects, it can be used for storing and serving
 
 It is a backend service but we treat it here as it is a common BaaS (Backend-as-a-Service) which we will use to augment a Serverless application.
 
+## Creating an AWS Account
 You will need to have an AWS account before this step.
 
 You can create an account at https://portal.aws.amazon.com/billing/signup#/start
 
 ![](images/AWS-SIGNUP.JPG)
+
+## Access to the S3 exercises
+
+- [S3-Static-Site.md](S3-Static-Site.md)
