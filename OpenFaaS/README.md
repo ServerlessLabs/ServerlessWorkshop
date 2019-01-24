@@ -9,7 +9,7 @@ The *upstream* project is on github at https://github.com/openfaas/faas and onli
 
 OpenFaaS can be quite easily deployed either on Kubernetes or a Docker Swarm cluster.
 
-On Docker Swarm, a simple ```docker-compose up``` from the source directory is sufficient to start the platform.
+On Docker Swarm, a simple ```deploy_stack.sh``` from the source directory is sufficient to start the platform, this will be explained in the Lab.
 
 Read about the latest OpenFaaS news at https://www.openfaas.com/blog/ or on Alex Ellis' blog at https://blog.alexellis.io/.
 
@@ -20,10 +20,13 @@ The command-line tool faas-cli is already installed into the provided VMs (at /u
 You can learn more about the tool at:
 https://blog.alexellis.io/quickstart-openfaas-cli/ and https://docs.openfaas.com/cli/install/.
 
+## Access to the OpenFaaS Exercises
+
+- [OpenFaaS.md](OpenFaaS.md)
+
 ## Workshop
 
 An existing workshop at is being actively developed by the OpenFaaS community:
 
 https://github.com/openfaas/workshop
-
 
