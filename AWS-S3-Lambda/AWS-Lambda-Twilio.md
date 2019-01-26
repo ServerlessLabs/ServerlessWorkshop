@@ -15,7 +15,7 @@ If you have chosen to use an rc file, source it as ```source <your-aws-credentia
 
 # Interfacing with Twilio
 
-For this functionality you will need to create a free account with Twilio and then validate the telephone numbers to which you wish to send SMS
+For this functionality you will need to create a free account with Twilio at https://www.twilio.com/try-twilio and then validate the telephone numbers to which you wish to send SMS
 
 You then need to export the following variables in your environment:
 
@@ -137,6 +137,8 @@ http POST :8000/service/sms/send msg="MY MESSAGE at $(date) from ${USER}@$(hostn
 
 **INCOMPLETE**: Need to safely transfer credentials into version deployed onto AWS
 
+For now this is a **WORST PRACTICE** ... but this VM will be deleted this morning so the risk is limited.
+
 
 ```bash
 chalice deploy; chalice url
@@ -148,7 +150,7 @@ chalice deploy; chalice url
 ```bash
 ## BUT HOW TO PASS IN TWILIO SECRETS ?? !!
 
-http POST https://jlmq3ygdu1.execute-api.us-west-1.amazonaws.com/api/service/sms/send msg="MY MESSAGE at $(date) from ${USER}@$(hostname)"
+http POST $(chalice url)/service/sms/send msg="MY MESSAGE at $(date) from ${USER}@$(hostname)"
 ```
 
 
