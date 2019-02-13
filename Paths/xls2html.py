@@ -306,6 +306,7 @@ def html_from_excel(wb, sheet_name, html_opfile, HTML_PAGE=False):
     for col in range( len( sheet.row_values(0) ) ):
         col_widths.append(0)
 
+    # Determine rect_heights:
     for rownum in range(0,sheet.nrows):
         rect_heights.append(1)
 
@@ -485,7 +486,7 @@ def createColouredTextImage_SVG(fgcolor, bgcolor, rect_height, col_width, height
         rect_height = height * rect_height
         svg = SVG_TEXTBOX_TEMPLATE.format( rect_width, rect_height, rect_width, rect_height, rect_width, rect_height,
                 bgcolor,
-                height, 'verdana', font_size, fgcolor, text)
+                rect_height-5, 'verdana', font_size, fgcolor, text)
     else:
         rect_height = height * rect_height
         svg = SVG_TEXT2BOX_TEMPLATE.format( rect_width, rect_height, rect_width, rect_height, rect_width, rect_height,
@@ -500,14 +501,15 @@ def createColouredTextImage_SVG(fgcolor, bgcolor, rect_height, col_width, height
     #print(svg[0]); print(svg[1]); print(svg[2]); die("SVG")
 
 
-    size=str(width) + "x" + str(height)
+    size=str(rect_width) + "x" + str(height)
     bgcolor = bgcolor[1:] # Remove #
     fgcolor = fgcolor[1:] # Remove #
     file = dir + "/" + fn_text + "_" + size + "_" + bgcolor + "_" + fgcolor + ".svg"
 
     #if not os.path.exists(file):
     # Create svg file
-    print("file=" + file)
+    if VERBOSE:
+        print("file=" + file)
     with open(file, 'w') as f:
         f.write(svg)
 
@@ -537,8 +539,9 @@ def createColouredTextImage_online(fgcolor, bgcolor, width, height, text, link=F
 
     if not os.path.exists(file):
         # Download the file from `url` and save it locally under `file_name`:
-        print("url=" + url)
-        print("file=" + file)
+        if VERBOSE:
+            print("url=" + url)
+            print("file=" + file)
         urllib.request.urlretrieve(url, file)
 
     return "<img src='" + file + "'/>"
@@ -578,8 +581,9 @@ def createColouredTextImage_magick(fgcolor, bgcolor, width, height, text, link=F
     COMMAND="convert -background '{}' -fill '{}' -font {} -pointsize {} label:'{}' {}".format(bgcolor, fgcolor, font, font_size, text, file)
 
     if not os.path.exists(file):
-        #print("file=" + file)
-        print(COMMAND)
+        if VERBOSE:
+            print("file=" + file)
+            print(COMMAND)
         output = os.popen(COMMAND).read()
 
     if not os.path.exists(file):
