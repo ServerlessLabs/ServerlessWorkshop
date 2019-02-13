@@ -46,9 +46,115 @@ You will be required to use your own AWS account, all usage will fall within the
   - About Apache OpenWhisk
   [Setup for OpenWhisk](/SETUP/SETUP-OPENWHISK.md)
 
+## Learning Paths
+
+See below for a matrix of elements in this tutorial.
+
+It is suggested that you follow one of these paths.
+
+If time allows it is recommended that you first follow one path, then follow the others building upon the knowledge gained in the other paths.
+
+#### Legend
+
+Strong colors: Tutorial elements
+
+Weak colors: Suggested optional elements
+
+Other: Not yet implemented
+
+### Path1: S3, Lambda+Python
+
+<table> <tbody> <tr>
+  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>
+</tr>
+<tr>
+  <td><img src='./images/S3+Static+Site_14x30_ccffcc_000000.svg'/></td>  <td><a href=S3.md> <img src='./images/Basic+S3+Static+Site_12x30_339966_ffffff.svg'/> </a></td>  <td><img src='./images/Site+Gen+React_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Site+Gen+Hugo_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Site+Gen+Pelican_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/DNS+Routing_8x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/AWS+Lambda+Python_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+aws+cli_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Chalice_8x30_339966_ffffff.svg'/></td>  <td><img src='./images/Using+Serverless+BRpa-sls-_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Terraform_10x30_ccffcc_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/AWS+Lambda+Node.js_18x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+aws+cli_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Claudia_8x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Using+Serverless+BRpa-sls-_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Terraform_10x30_ccffcc_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/OpenFaaS_8x30_ccffcc_000000.svg'/></td>  <td><a href=OpenFaaS.md> <img src='./images/OpenFaaS+Setup_8x30_ccffcc_ffffff.svg'/> </a></td>  <td><img src='./images/Investigate+Store_11x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Investigate+cliBRcn-+faasBR-cli_16x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Creating+functions+from+templates_18x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/OpenWhisk_9x30_ccffcc_000000.svg'/></td>  <td><img src='./images/OpenWhisk+Setup_9x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>  <td><img src='./images/Investigate+cliBRcn-+wsk,+wskdeploy_16x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/Capabilities_12x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Send+SMS_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Send+EBR-Mail_11x30_ffffff_000000.svg'/></td>  <td><img src='./images/Read+Config+from+S3+file_13x30_ffffff_000000.svg'/></td>  <td><img src='./images/Read+Config+from+DB_11x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/Scenarii_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Informer+Tool_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Scooper+BRpa-Content+Aggregator-_21x30_ffffff_000000.svg'/></td>  <td><img src='./images/Bookmark+Manager_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Image+Processor_10x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+ </tbody> </table>
+
+### Path2: S3, Lambda+Node.js
+
+<table> <tbody> <tr>
+  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>
+</tr>
+<tr>
+  <td><img src='./images/S3+Static+Site_14x30_ccffcc_000000.svg'/></td>  <td><a href=S3.md> <img src='./images/Basic+S3+Static+Site_12x30_339966_ffffff.svg'/> </a></td>  <td><img src='./images/Site+Gen+React_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Site+Gen+Hugo_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Site+Gen+Pelican_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/DNS+Routing_8x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/AWS+Lambda+Python_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+aws+cli_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Chalice_8x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Using+Serverless+BRpa-sls-_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Terraform_10x30_ccffcc_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/AWS+Lambda+Node.js_18x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+aws+cli_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Claudia_8x30_339966_ffffff.svg'/></td>  <td><img src='./images/Using+Serverless+BRpa-sls-_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Terraform_10x30_ccffcc_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/OpenFaaS_8x30_ccffcc_000000.svg'/></td>  <td><a href=OpenFaaS.md> <img src='./images/OpenFaaS+Setup_8x30_ccffcc_ffffff.svg'/> </a></td>  <td><img src='./images/Investigate+Store_11x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Investigate+cliBRcn-+faasBR-cli_16x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Creating+functions+from+templates_18x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/OpenWhisk_9x30_ccffcc_000000.svg'/></td>  <td><img src='./images/OpenWhisk+Setup_9x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>  <td><img src='./images/Investigate+cliBRcn-+wsk,+wskdeploy_16x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/Capabilities_12x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Send+SMS_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Send+EBR-Mail_11x30_ffffff_000000.svg'/></td>  <td><img src='./images/Read+Config+from+S3+file_13x30_ffffff_000000.svg'/></td>  <td><img src='./images/Read+Config+from+DB_11x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/Scenarii_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Informer+Tool_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Scooper+BRpa-Content+Aggregator-_21x30_ffffff_000000.svg'/></td>  <td><img src='./images/Bookmark+Manager_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Image+Processor_10x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+ </tbody> </table>
+
+### Path3: OpenFaaS
+
+<table> <tbody> <tr>
+  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>  <th><img src='./images/_0x30_ffffff_000000.svg'/></th>
+</tr>
+<tr>
+  <td><img src='./images/S3+Static+Site_14x30_ccffcc_000000.svg'/></td>  <td><a href=S3.md> <img src='./images/Basic+S3+Static+Site_12x30_ccffcc_ffffff.svg'/> </a></td>  <td><img src='./images/Site+Gen+React_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Site+Gen+Hugo_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Site+Gen+Pelican_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/DNS+Routing_8x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/AWS+Lambda+Python_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+aws+cli_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Chalice_8x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Using+Serverless+BRpa-sls-_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Terraform_10x30_ccffcc_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/AWS+Lambda+Node.js_18x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+aws+cli_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Claudia_8x30_ccffcc_ffffff.svg'/></td>  <td><img src='./images/Using+Serverless+BRpa-sls-_17x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Using+Terraform_10x30_ccffcc_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/OpenFaaS_8x30_ccffcc_000000.svg'/></td>  <td><a href=OpenFaaS.md> <img src='./images/OpenFaaS+Setup_8x30_339966_ffffff.svg'/> </a></td>  <td><img src='./images/Investigate+Store_11x30_339966_ffffff.svg'/></td>  <td><img src='./images/Investigate+cliBRcn-+faasBR-cli_16x30_339966_ffffff.svg'/></td>  <td><img src='./images/Creating+functions+from+templates_18x30_339966_ffffff.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/OpenWhisk_9x30_ccffcc_000000.svg'/></td>  <td><img src='./images/OpenWhisk+Setup_9x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>  <td><img src='./images/Investigate+cliBRcn-+wsk,+wskdeploy_16x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/Capabilities_12x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Send+SMS_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Send+EBR-Mail_11x30_ffffff_000000.svg'/></td>  <td><img src='./images/Read+Config+from+S3+file_13x30_ffffff_000000.svg'/></td>  <td><img src='./images/Read+Config+from+DB_11x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+<tr>
+  <td><img src='./images/Scenarii_8x30_ccffcc_000000.svg'/></td>  <td><img src='./images/Informer+Tool_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Scooper+BRpa-Content+Aggregator-_21x30_ffffff_000000.svg'/></td>  <td><img src='./images/Bookmark+Manager_8x30_ffffff_000000.svg'/></td>  <td><img src='./images/Image+Processor_10x30_ffffff_000000.svg'/></td>  <td><img src='./images/_0x30_ffffff_000000.svg'/></td>
+</tr>
+ </tbody> </table>
+
+### Path3: OpenWhisk
+
 ## Serverless
 
 ![images/ServerlessEvents.PNG](images/ServerlessEvents.PNG)
 
 ## Resources
+
+
+
+
 
