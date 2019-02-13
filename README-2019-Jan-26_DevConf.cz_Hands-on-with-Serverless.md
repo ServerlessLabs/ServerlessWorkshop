@@ -151,6 +151,8 @@ Other: Not yet implemented
 
 ### Path4: OpenWhisk
 
+Not implemented yet.
+
 ## Serverless
 
 ![images/ServerlessEvents.PNG](images/ServerlessEvents.PNG)
