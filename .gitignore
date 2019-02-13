@@ -1,3 +1,5 @@
 .ipynb_checkpoints/
 *.bak
 .*.swp
+Paths/*.html
+Paths/images
